@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<style>
+   
+  
+</style>
+<script>
+     $( function() {
+      $( "#accordion" ).accordion();
+    } );
+ 
+$( function() {
+    $("#button").click(function(){
+        $("#roma").dialog({
+            buttons:{"login": function() {
+          $( this ).dialog( "close" )
+                   .click(alert($(".name").val())
+                  
+              
+                  )
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" ).click(alert($(".in")));
+
+        
+        }
+        
+         
+            }
+
+
+        }
+
+        )
+    });
+  } );
+
+</script>
+   
+   
+   
+
+    <div id="accordion">
+  <h3>html</h3>
+  <div><a href="#">html source </a></div>
+  <h3>css</h3>
+  <div><a href="#"> css source</a></div>
+  <h3>js</h3>
+  <div><a href="#">js source</a></div>
+</div>
+
+<br> <br>
+
+<button id="button">click me
+
+</button>
+<div id="roma" style="display: none">
+    <label> name</label>
+    <input type="text" value="name" class="name">
+    <label> passward</label>
+    <input type="password" value="passward">
+    <label> are you sure ?</label>
+    <input type="checkbox">
+    
+    
+
+
+</div>
+
+
+
+<body>
+    
+</body>
+</html>

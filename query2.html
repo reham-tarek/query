@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query 2</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+
+
+
+$( function() {
+    $( "#draggable" ).draggable({ 
+        revert: "invalid"
+       
+      
+      
+
+
+
+
+
+   
+        });
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( " that is Dropped!" )
+
+      
+      }
+    });
+  } );
+
+
+    </script>
+   <style>
+       
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+  overflow: hidden;
+  background-color: #333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+
+
+
+  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 200px; height: 200px; padding: 0.5em; float: left; margin: 10px; }
+  
+
+   </style>
+        
+    <div id="flip">Click here</div>
+<div id="panel"><img src="1.jpeg"></div>
+<ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <br> <br>
+  <div id="draggable" class="ui-widget-content">
+    <p>Drag me to my target</p>
+  </div>
+   
+  <div id="droppable" class="ui-widget-header">
+    <p>Drop here</p>
+  </div>
+
+  <br> <br> 
+
+</body>
+</html>

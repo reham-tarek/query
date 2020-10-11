@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="../JQuery/jquery-3.2.1.min.js"></script>
+</head>
+<style>
+.change {width: 100px;
+height: 200px;
+border: 1px rebeccapurple solid;}
+
+.two {width:400px;
+height: 200px;
+background-color: palevioletred;}
+
+.c1 {width: 200px;background-color: red;}
+.c2 {width: 100px;background-color: blue;}
+.c3 { transform : rotateY(180deg)}
+
+
+.tiger {position: relative;
+       left: 0;}
+
+</style>
+<body>
+    <div class="change"></div>
+
+    <br>
+
+    <button id="button"> click me</button>
+
+
+    <br> <br>
+    <div class="two"></div>
+    <br> <br> <br>
+
+<img  class="smile" src="smiley.png">
+
+<br> <br> <br>
+<form>
+    <label> name</label>
+    <input id="four" type="text" value="">
+    <br>
+    <label> password</label>
+    <input  id="six" type="password" value="">
+
+
+</form>
+<div class="five"></div>
+
+<br> <br> <br> 
+<img src="smiley.png" class="img1">
+<button class="button"> click me</button>
+<br> <br> <br> 
+<img src="tiger.gif" class="tiger">
+<br> <br> <br>
+    <script>
+        $(document).ready(function(){
+  $("#button").click(function(){
+      $(".change").css("width","300px").css("border","3px red solid")
+  }
+  )
+
+
+  $(".two").mouseover(function(){
+
+   
+      $(this).toggleClass("c1")
+      $(this).removeClass("c2")
+  }
+
+  )
+  $(".two").mouseleave(function(){
+      $(this).toggleClass("c2")
+      $(this).removeClass("c1")
+  }
+
+  )
+
+  $(".smile").mouseover(function(){
+      $(this).attr("src","sad.png")
+  }
+
+  )
+
+  $(".smile").mouseleave(function(){
+      $(this).attr("src","smiley.png")
+  }
+   
+  )
+
+
+//   $("#four").blur(function (){
+//     if ( ($(this).val() == '') ||  ($(this).val().length > 9 )  ) {
+//         $(".five").append("invalid")
+// } else{
+//    $(".five").append("valid")
+// }
+//   }
+//   )
+$("#four").blur(function (){
+    if( ($(this).val() == '') ||  ($(this).val().length > 9 )  ) {
+        $(".five").empty()
+        $(".five").append("invalid")
+       
+
+} else { 
+    $(".five").empty()
+     $(".five").append("valid")
+
+
+}
+  }
+  )
+
+  $("#six").blur(function (){
+    if( ($(this).val() == '') ||  ($(this).val().length > 3 )  ) {
+        $(".five").empty()
+        $(".five").append("invalid")
+       
+
+} else { 
+    $(".five").empty()
+     $(".five").append("valid")
+
+
+}
+  }
+  )
+
+
+
+
+
+
+
+
+
+$(".button").on("click" , function(){
+    $(".img1").fadeToggle("slow")
+})
+
+
+
+$(".tiger").on("click" , function(){
+    $(this).addClass("c3")
+    $(this).animate({
+       
+        left:500,
+    },5000)
+    }
+    )
+function kkk(){
+    if($(this).css("left","500")){
+        alert("koko")
+    }
+} 
+
+    
+    
+    
+
+
+
+
+
+
+
+});
+
+
+    </script>
+
+
+</body>
+</html>
